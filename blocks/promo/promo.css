@@ -43,29 +43,36 @@
 .promo > div:not(:first-child) {
   position: relative;
   z-index: 1;
-  max-width: 480px;
+  max-width: 560px;
 }
 
 .promo p,
 .promo h5,
 .promo h6 {
-  margin: 0 0 8px;
+  margin: 0 0 12px;
 }
 
 .promo p:first-of-type {
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  font-size: var(--body-font-size-xs);
   font-weight: 700;
   opacity: 0.9;
 }
 
 .promo h6 {
-  font-size: var(--heading-font-size-xs);
+  font-size: var(--body-font-size-s);
+  font-weight: 600;
 }
 
 .promo h5 {
-  font-size: var(--heading-font-size-s);
-  max-width: 420px;
+  font-size: var(--heading-font-size-l);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.promo p:last-of-type {
+  font-size: var(--body-font-size-xs);
 }
 
 .promo-buttons {
