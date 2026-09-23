@@ -8,18 +8,24 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  min-height: 320px;
   padding: 40px 24px;
   color: #fff;
-  background: linear-gradient(100deg, var(--taqa-teal) 0%, #4fae74 55%, var(--taqa-purple) 100%);
 }
 
 .promo > div:first-child {
-  order: 2;
-  flex: none;
-  width: 160px;
-  height: 160px;
+  position: absolute;
+  inset: 0;
+}
+
+.promo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(0 0 0 / 55%) 0%, rgb(0 0 0 / 15%) 60%, transparent 100%);
 }
 
 .promo picture {
@@ -32,14 +38,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 0 0 10px transparent, 0 0 0 24px var(--taqa-purple);
 }
 
 .promo > div:not(:first-child) {
   position: relative;
   z-index: 1;
-  max-width: 640px;
+  max-width: 480px;
 }
 
 .promo p,
@@ -91,18 +95,7 @@
 
 @media (width >= 900px) {
   .promo {
-    flex-direction: row;
     min-height: 420px;
     padding: 48px 8%;
-  }
-
-  .promo > div:first-child {
-    order: 3;
-    position: absolute;
-    right: 6%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 260px;
-    height: 260px;
   }
 }
