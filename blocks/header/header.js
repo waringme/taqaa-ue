@@ -138,6 +138,20 @@ export default async function decorate(block) {
   }
 
   const navSections = nav.querySelector('.nav-sections');
+
+  // the sections content can carry a leading list of utility/site-switcher
+  // links (outages, business lines, language, search); when present, lift
+  // it out into its own top bar rendered above the rest of the header
+  let navUtility;
+  if (navSections) {
+    const lists = navSections.querySelectorAll(':scope .default-content-wrapper > ul');
+    if (lists.length > 1) {
+      navUtility = document.createElement('div');
+      navUtility.className = 'nav-utility';
+      navUtility.append(lists[0]);
+    }
+  }
+
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
@@ -159,6 +173,7 @@ export default async function decorate(block) {
     </button>`;
   hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
   nav.prepend(hamburger);
+  if (navUtility) nav.prepend(navUtility);
   nav.setAttribute('aria-expanded', 'false');
   // prevent mobile nav behavior on window resize
   toggleMenu(nav, navSections, isDesktop.matches);
