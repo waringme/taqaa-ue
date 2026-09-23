@@ -72,7 +72,7 @@
 }
 
 .section.faq ul a {
-  color: var(--text-color);
+  color: var(--taqa-teal);
 }
 
 .section.support .cards > ul {
@@ -109,6 +109,10 @@
 }
 
 /* Solutions: row of link-only cards (find-your-solution pattern) */
+.section.solutions h4 {
+  color: var(--taqa-teal);
+}
+
 .section.solutions .cards > ul {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
@@ -140,6 +144,17 @@
   flex: none;
   font-weight: 400;
   font-size: 1.2em;
+  color: var(--dark-color);
+}
+
+.section.split .cards::before {
+  content: 'Energy Saving Tips';
+  display: block;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  font-size: var(--body-font-size-xs);
   color: var(--taqa-teal);
 }
 
@@ -154,4 +169,20 @@
 .section.split .cards > ul > li {
   flex: 0 0 220px;
   scroll-snap-align: start;
+}
+
+.section.split .cards-card-body p:last-of-type a {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--taqa-teal);
+  border-radius: 2.4em;
+  padding: 0.4em 1em;
+  font-weight: 700;
+  font-size: var(--body-font-size-xs);
+  text-decoration: none;
+}
+
+.section.split .cards-card-body p:last-of-type a:hover {
+  background-color: var(--taqa-teal);
+  color: var(--background-color);
 }
