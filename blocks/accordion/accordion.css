@@ -1,5 +1,8 @@
 .accordion h4 {
   margin-top: 0;
+  margin-bottom: 16px;
+  font-size: var(--heading-font-size-xl);
+  font-weight: 700;
   color: var(--taqa-teal);
 }
 

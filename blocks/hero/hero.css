@@ -18,7 +18,14 @@
 
 .hero h1 {
   margin: 0;
+  font-size: 48px;
   font-weight: 400;
+}
+
+@media (width >= 900px) {
+  .hero h1 {
+    font-size: 72px;
+  }
 }
 
 .hero p:first-of-type {
