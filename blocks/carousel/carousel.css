@@ -1,3 +1,15 @@
+.carousel {
+  padding: 40px 0;
+  background-color: #e8f6f3;
+  text-align: center;
+}
+
+@media (width >= 900px) {
+  .carousel {
+    padding: 56px 0;
+  }
+}
+
 .carousel-slides {
   display: flex;
   overflow-x: auto;

@@ -140,14 +140,19 @@
   color: var(--dark-color);
 }
 
-/* Tips: light, centered carousel with a heading above it */
+/* Tips: heading above a carousel; carousel supplies its own background */
 .section.tips {
   margin: 0;
-  padding: 56px 0;
+  padding: 40px 0;
   background-color: #e8f6f3;
   text-align: center;
 }
 
 .section.tips h4 {
   color: var(--taqa-teal);
+}
+
+.section.tips .carousel {
+  padding: 0;
+  background-color: transparent;
 }

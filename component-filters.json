@@ -51,7 +51,9 @@
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "carousel",
+      "promo"
     ]
   },
   {
