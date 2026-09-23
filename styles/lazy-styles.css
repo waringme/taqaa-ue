@@ -1,1 +1,157 @@
 /* add global styles that can be loaded post LCP here */
+
+/* Support band: dark, full-bleed row of icon links */
+.section.support {
+  margin: 0;
+  padding: 48px 0;
+  background-color: var(--taqa-navy);
+  color: var(--background-color);
+}
+
+.section.support a {
+  color: var(--background-color);
+}
+
+/*
+ * FAQ and Split sections lay out multiple sibling wrapper divs (one per block
+ * or default-content group) as a grid. Each wrapper normally gets centered
+ * independently (see "main > .section > div" in styles.css), so that
+ * centering is reset here and re-applied once on the section itself.
+ */
+.section.faq,
+.section.split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.section.faq > div,
+.section.split > div {
+  max-width: unset;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+@media (width >= 900px) {
+  .section.faq,
+  .section.split {
+    padding: 0 32px;
+  }
+
+  .section.faq {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .section.faq > div:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .section.faq > div:not(:first-child) {
+    align-self: start;
+  }
+
+  .section.split {
+    grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.4fr);
+  }
+}
+
+.section.faq ul {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: var(--light-color);
+}
+
+.section.faq ul li {
+  padding: 4px 0;
+}
+
+.section.faq ul a {
+  color: var(--text-color);
+}
+
+.section.support .cards > ul {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.section.support .cards > ul > li {
+  border: none;
+  background-color: transparent;
+  text-align: center;
+}
+
+.section.support .cards-card-image {
+  width: 48px;
+  margin: 0 auto;
+}
+
+.section.support .cards-card-image img {
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.section.support .cards-card-body {
+  margin: 12px 0 0;
+}
+
+.section.support .cards-card-body p {
+  margin: 0 0 4px;
+}
+
+.section.support h6 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Solutions: row of link-only cards (find-your-solution pattern) */
+.section.solutions .cards > ul {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.section.solutions .cards > ul > li {
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.section.solutions .cards-card-body {
+  margin: 0;
+}
+
+.section.solutions .cards-card-body p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.section.solutions .cards-card-body a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--text-color);
+}
+
+.section.solutions .cards-card-body a::after {
+  content: '\2197';
+  flex: none;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: var(--taqa-teal);
+}
+
+.section.split .cards > ul {
+  display: flex;
+  grid-template-columns: unset;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+}
+
+.section.split .cards > ul > li {
+  flex: 0 0 220px;
+  scroll-snap-align: start;
+}

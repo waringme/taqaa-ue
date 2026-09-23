@@ -33,6 +33,22 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "Solutions (link cards row)",
+              "value": "solutions"
+            },
+            {
+              "name": "Split (two columns side by side)",
+              "value": "split"
+            },
+            {
+              "name": "FAQ (list with sidebar)",
+              "value": "faq"
+            },
+            {
+              "name": "Support band (dark, icon links)",
+              "value": "support"
             }
           ]
         }
@@ -50,7 +66,9 @@
         "hero",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "promo",
+        "accordion"
       ]
     }
   ]

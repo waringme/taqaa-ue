@@ -1,0 +1,83 @@
+.promo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  min-height: 320px;
+  padding: 32px 28px;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  background: linear-gradient(135deg, var(--taqa-teal) 0%, var(--taqa-purple) 100%);
+}
+
+.promo > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.promo picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.promo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  mix-blend-mode: luminosity;
+}
+
+.promo > div:not(:first-child) {
+  position: relative;
+  z-index: 1;
+}
+
+.promo p,
+.promo h5,
+.promo h6 {
+  margin: 0 0 8px;
+}
+
+.promo p:first-of-type {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: var(--body-font-size-xs);
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.promo h6 {
+  font-size: var(--heading-font-size-xs);
+}
+
+.promo h5 {
+  font-size: var(--heading-font-size-s);
+  text-transform: uppercase;
+}
+
+.promo-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.promo-buttons .button-wrapper {
+  margin: 0;
+}
+
+.promo-buttons a.button {
+  border-color: #fff;
+  background-color: transparent;
+  color: #fff;
+}
+
+.promo-buttons a.button:hover,
+.promo-buttons a.button:focus-visible {
+  background-color: rgb(255 255 255 / 15%);
+  border-color: #fff;
+  color: #fff;
+}

@@ -19,6 +19,12 @@
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
 
+  /* brand colors */
+  --taqa-teal: #0ab3a1;
+  --taqa-purple: #6b42d1;
+  --taqa-navy: #00093f;
+  --taqa-light-green: #b5d7be;
+
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
   --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;

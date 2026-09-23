@@ -136,8 +136,42 @@
           {
             "name": "Highlight",
             "value": "highlight"
+          },
+          {
+            "name": "Solutions (link cards row)",
+            "value": "solutions"
+          },
+          {
+            "name": "Split (two columns side by side)",
+            "value": "split"
+          },
+          {
+            "name": "FAQ (list with sidebar)",
+            "value": "faq"
+          },
+          {
+            "name": "Support band (dark, icon links)",
+            "value": "support"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "question",
+        "label": "Question"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "answer",
+        "value": "",
+        "label": "Answer"
       }
     ]
   },
@@ -191,6 +225,32 @@
   },
   {
     "id": "hero",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "promo",
     "fields": [
       {
         "component": "reference",
