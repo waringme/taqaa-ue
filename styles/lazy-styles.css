@@ -147,42 +147,14 @@
   color: var(--dark-color);
 }
 
-.section.split .cards::before {
-  content: 'Energy Saving Tips';
-  display: block;
-  margin-bottom: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-  font-size: var(--body-font-size-xs);
+/* Tips: light, centered carousel with a heading above it */
+.section.tips {
+  margin: 0;
+  padding: 56px 0;
+  background-color: #e8f6f3;
+  text-align: center;
+}
+
+.section.tips h4 {
   color: var(--taqa-teal);
-}
-
-.section.split .cards > ul {
-  display: flex;
-  grid-template-columns: unset;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 8px;
-}
-
-.section.split .cards > ul > li {
-  flex: 0 0 220px;
-  scroll-snap-align: start;
-}
-
-.section.split .cards-card-body p:last-of-type a {
-  display: inline-flex;
-  align-items: center;
-  border: 2px solid var(--taqa-teal);
-  border-radius: 2.4em;
-  padding: 0.4em 1em;
-  font-weight: 700;
-  font-size: var(--body-font-size-xs);
-  text-decoration: none;
-}
-
-.section.split .cards-card-body p:last-of-type a:hover {
-  background-color: var(--taqa-teal);
-  color: var(--background-color);
 }

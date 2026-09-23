@@ -1,19 +1,25 @@
+.promo-container .promo-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
 .promo {
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
-  min-height: 320px;
-  padding: 32px 28px;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 40px 24px;
   color: #fff;
-  background: linear-gradient(135deg, var(--taqa-teal) 0%, var(--taqa-purple) 100%);
+  background: linear-gradient(100deg, var(--taqa-teal) 0%, #4fae74 55%, var(--taqa-purple) 100%);
 }
 
 .promo > div:first-child {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+  order: 2;
+  flex: none;
+  width: 160px;
+  height: 160px;
 }
 
 .promo picture {
@@ -26,13 +32,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.6;
-  mix-blend-mode: luminosity;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px transparent, 0 0 0 24px var(--taqa-purple);
 }
 
 .promo > div:not(:first-child) {
   position: relative;
   z-index: 1;
+  max-width: 640px;
 }
 
 .promo p,
@@ -44,7 +51,6 @@
 .promo p:first-of-type {
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: var(--body-font-size-xs);
   font-weight: 700;
   opacity: 0.9;
 }
@@ -55,7 +61,7 @@
 
 .promo h5 {
   font-size: var(--heading-font-size-s);
-  text-transform: uppercase;
+  max-width: 420px;
 }
 
 .promo-buttons {
@@ -71,13 +77,32 @@
 
 .promo-buttons a.button {
   border-color: #fff;
-  background-color: transparent;
-  color: #fff;
+  background-color: #fff;
+  color: var(--text-color);
+  font-weight: 700;
 }
 
 .promo-buttons a.button:hover,
 .promo-buttons a.button:focus-visible {
-  background-color: rgb(255 255 255 / 15%);
+  background-color: var(--light-color);
   border-color: #fff;
-  color: #fff;
+  color: var(--text-color);
+}
+
+@media (width >= 900px) {
+  .promo {
+    flex-direction: row;
+    min-height: 420px;
+    padding: 48px 8%;
+  }
+
+  .promo > div:first-child {
+    order: 3;
+    position: absolute;
+    right: 6%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 260px;
+    height: 260px;
+  }
 }

@@ -49,6 +49,10 @@
             {
               "name": "Support band (dark, icon links)",
               "value": "support"
+            },
+            {
+              "name": "Tips (light, centered carousel)",
+              "value": "tips"
             }
           ]
         }
@@ -68,7 +72,8 @@
         "columns",
         "fragment",
         "promo",
-        "accordion"
+        "accordion",
+        "carousel"
       ]
     }
   ]
