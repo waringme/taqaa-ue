@@ -44,14 +44,7 @@
 
   .section.faq {
     grid-template-columns: 2fr 1fr;
-  }
-
-  .section.faq > div:first-child {
-    grid-column: 1 / -1;
-  }
-
-  .section.faq > div:not(:first-child) {
-    align-self: start;
+    align-items: start;
   }
 
   .section.split {

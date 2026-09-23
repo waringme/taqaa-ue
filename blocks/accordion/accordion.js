@@ -1,3 +1,5 @@
+import { moveInstrumentation } from '../../scripts/scripts.js';
+
 const ALL_CATEGORY = 'all';
 
 /**
@@ -57,11 +59,32 @@ function buildFilter(block, categories) {
  */
 export default function decorate(block) {
   const categories = [];
+  const rows = [...block.children];
+  const titleRow = rows.shift();
+  const descriptionRow = rows.shift();
 
-  [...block.children].forEach((row) => {
+  const header = document.createDocumentFragment();
+  if (titleRow) {
+    const heading = document.createElement('h4');
+    moveInstrumentation(titleRow, heading);
+    heading.append(...titleRow.childNodes);
+    header.append(heading);
+    titleRow.remove();
+  }
+  if (descriptionRow) {
+    const description = document.createElement('div');
+    description.className = 'accordion-description';
+    moveInstrumentation(descriptionRow, description);
+    description.append(...descriptionRow.childNodes);
+    header.append(description);
+    descriptionRow.remove();
+  }
+
+  rows.forEach((row) => {
     const label = row.children[0];
     const summary = document.createElement('summary');
     summary.className = 'accordion-item-label';
+    moveInstrumentation(label, summary);
     summary.append(...label.childNodes);
 
     const body = row.children[1];
@@ -69,19 +92,22 @@ export default function decorate(block) {
 
     const categoryCell = row.children[2];
     const category = categoryCell?.textContent.trim();
-    categoryCell?.remove();
+    if (categoryCell) categoryCell.hidden = true;
 
     const details = document.createElement('details');
     details.className = 'accordion-item';
+    moveInstrumentation(row, details);
     if (category) {
       details.dataset.category = category;
       if (!categories.includes(category)) categories.push(category);
     }
     details.append(summary, body);
+    if (categoryCell) details.append(categoryCell);
     row.replaceWith(details);
   });
 
   if (categories.length) {
     block.prepend(buildFilter(block, categories));
   }
+  block.prepend(header);
 }

@@ -1,3 +1,12 @@
+.accordion h4 {
+  margin-top: 0;
+  color: var(--taqa-teal);
+}
+
+.accordion-description {
+  margin-bottom: 24px;
+}
+
 .accordion-filter {
   display: flex;
   flex-wrap: wrap;
