@@ -47,6 +47,13 @@
           "name": "answer",
           "value": "",
           "label": "Answer"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "category",
+          "label": "Category",
+          "description": "Groups this question under a filter tab. Leave blank to always show it."
         }
       ]
     }

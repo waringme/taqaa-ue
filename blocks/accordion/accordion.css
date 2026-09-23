@@ -1,3 +1,31 @@
+.accordion-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.accordion-filter button {
+  border: 1px solid var(--dark-color);
+  border-radius: 2.4em;
+  padding: 0.5em 1.4em;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.accordion-filter button[aria-pressed='true'] {
+  border-color: var(--taqa-teal);
+  background-color: var(--taqa-teal);
+  color: var(--background-color);
+}
+
+.accordion .accordion-item[hidden] {
+  display: none;
+}
+
 .accordion .accordion-item + .accordion-item {
   border-top: 1px solid #dadada;
 }
