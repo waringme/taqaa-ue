@@ -125,6 +125,25 @@ h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
 
+/*
+ * A heading immediately followed by another heading of the same level is
+ * authored as an eyebrow caption above the real title (e.g. "Help &
+ * Support" / "Certificates"), not two stacked headings of equal weight.
+ */
+:is(h1, h2, h3, h4, h5, h6):first-child:has(+ :is(h1, h2, h3, h4, h5, h6)) {
+  margin-top: 0;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: var(--body-font-size-xs);
+  font-weight: 700;
+  color: var(--taqa-teal, var(--link-color));
+}
+
+:is(h1, h2, h3, h4, h5, h6):first-child:has(+ :is(h1, h2, h3, h4, h5, h6)) + :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: 0;
+}
+
 p,
 dl,
 ol,
