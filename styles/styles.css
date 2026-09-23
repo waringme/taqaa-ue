@@ -43,7 +43,7 @@
   --heading-font-size-xs: 22px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 88px;
 }
 
 /* fallback fonts */
@@ -115,6 +115,7 @@ h6 {
   font-family: var(--heading-font-family);
   font-weight: 600;
   line-height: 1.25;
+  text-transform: uppercase;
   scroll-margin: 40px;
 }
 

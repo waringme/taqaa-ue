@@ -378,8 +378,8 @@ header nav .nav-utility ul {
   padding: 0;
 }
 
-header nav .nav-utility > ul > li:last-child {
-  margin-left: auto;
+header nav .nav-utility > ul {
+  justify-content: flex-end;
 }
 
 header nav .nav-utility ul ul {
