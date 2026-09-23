@@ -8,10 +8,6 @@
   color: var(--background-color);
 }
 
-.section.support a {
-  color: var(--background-color);
-}
-
 /*
  * FAQ and Split sections lay out multiple sibling wrapper divs (one per block
  * or default-content group) as a grid. Each wrapper normally gets centered
@@ -92,15 +88,6 @@
   margin: 12px 0 0;
 }
 
-.section.support .cards-card-body p {
-  margin: 0 0 4px;
-}
-
-.section.support h6 {
-  margin: 0;
-  text-transform: uppercase;
-}
-
 /* Solutions: row of link-only cards (find-your-solution pattern) */
 .section.solutions h4 {
   color: var(--taqa-teal);
@@ -122,6 +109,21 @@
 .section.solutions .cards-card-body p {
   margin: 0;
   font-weight: 700;
+}
+
+.section.support .cards-card-body p:first-child {
+  margin: 0 0 4px;
+  font-family: var(--heading-font-family);
+  font-size: var(--body-font-size-s);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.section.support .cards-card-body p:last-child {
+  margin: 0;
+  color: var(--taqa-light-green);
+  font-size: var(--body-font-size-xs);
 }
 
 .section.solutions .cards-card-body a {
