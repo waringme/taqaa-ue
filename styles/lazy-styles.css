@@ -3,9 +3,15 @@
 /* Support band: dark, full-bleed row of icon links */
 .section.support {
   margin: 0;
-  padding: 48px 0;
+  padding: 80px 0;
   background-color: var(--taqa-navy);
   color: var(--background-color);
+}
+
+@media (width >= 900px) {
+  .section.support {
+    padding: 120px 0;
+  }
 }
 
 /*
