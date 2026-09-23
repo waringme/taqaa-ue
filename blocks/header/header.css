@@ -223,7 +223,8 @@ header nav .nav-sections ul > li > ul > li {
 }
 
 @media (width >= 900px) {
-  header nav .nav-sections {
+  header nav .nav-sections,
+  header nav[aria-expanded='true'] .nav-sections {
     display: flex;
     visibility: visible;
     justify-content: flex-end;
@@ -232,6 +233,10 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav[aria-expanded='true'] .nav-sections {
     align-self: unset;
+  }
+
+  header nav .nav-sections .default-content-wrapper {
+    margin-left: auto;
   }
 
   header nav .nav-sections .default-content-wrapper > ul {
@@ -367,15 +372,18 @@ header nav .nav-utility ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: stretch;
+  gap: 16px;
   margin: 0;
   padding: 0;
 }
 
+header nav .nav-utility > ul > li:last-child {
+  margin-left: auto;
+}
+
 header nav .nav-utility ul ul {
   flex-wrap: nowrap;
-  gap: 16px;
 }
 
 header nav .nav-utility li {
@@ -417,7 +425,7 @@ header nav .nav-utility .icon {
 
   header nav .nav-utility ul ul {
     flex-wrap: wrap;
-    gap: 0;
+    gap: 4px;
   }
 
   header nav .nav-utility > ul > li > a {
