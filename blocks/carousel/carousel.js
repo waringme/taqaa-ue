@@ -1,3 +1,5 @@
+import { moveInstrumentation } from '../../scripts/scripts.js';
+
 function updateActiveSlide(slide) {
   const block = slide.closest('.carousel');
   const slideIndex = parseInt(slide.dataset.slideIndex, 10);
@@ -39,6 +41,7 @@ function createSlide(row, slideIndex) {
   const slide = document.createElement('li');
   slide.dataset.slideIndex = slideIndex;
   slide.className = 'carousel-slide';
+  moveInstrumentation(row, slide);
   [...row.children].forEach((cell, i) => {
     if (CELL_CLASSES[i]) cell.classList.add(CELL_CLASSES[i]);
     slide.append(cell);
